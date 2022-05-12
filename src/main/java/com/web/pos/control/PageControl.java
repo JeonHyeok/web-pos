@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class TestControl
  */
-@WebServlet(urlPatterns = {"/main", "/login", "/signup"})
+@WebServlet(urlPatterns = {"/main", "/login", "/membership", "/memberprocess"})
 public class PageControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,7 +40,22 @@ public class PageControl extends HttpServlet {
 		
 		// step #2. data processing
 		String viewName = null;
-		viewName = "WEB-INF/view/main.jsp";
+		String uri = request.getRequestURI();
+		
+		if (uri.equals("/main")) {
+			System.out.println("main 처리 실행");
+			viewName = "WEB-INF/view/main.jsp";
+		} else if (uri.equals("/login")) {
+			System.out.println("로그인 처리 실행");
+			viewName = "WEB-INF/view/main.jsp";
+		} else if (uri.equals("/membership")) {
+			System.out.println("회원가입 화면 실행");
+			viewName = "WEB-INF/view/membership.jsp";
+		} else if (uri.equals("/memberprocess")) {
+			System.out.println("회원가입 실행");
+			viewName = "WEB-INF/view/main.jsp";
+		}
+		
 		
 		// step #3. output results
 		RequestDispatcher view = request.getRequestDispatcher(viewName);
