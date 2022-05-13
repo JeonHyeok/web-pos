@@ -14,8 +14,9 @@
 
 	<form action="/memberprocess" method="POST">
 		<div id=member>
-			아이디 : <input type="text" value="" required /><br>
-			비밀번호 : <input type="text" value="" required /><br>
+			아이디 : <input type="text" name="member_id" required /><br>
+			비밀번호 : <input type="text" name="member_pw" required /><br>
+			이름 : <input type="text" name="member_name" required />
 		</div>
 		<input type="submit" value="가입 신청" />
 	</form>

@@ -3,6 +3,7 @@ package com.web.pos.entity;
 public class UserInfo {
 	private String user_id;
 	private String user_pw;
+	private String user_name;
 	
 	public String getUser_id() {
 		return user_id;
@@ -18,5 +19,13 @@ public class UserInfo {
 	
 	public void setUser_pw(String user_pw) {
 		this.user_pw = user_pw;
+	}
+
+	public String getUser_name() {
+		return user_name;
+	}
+
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
 }

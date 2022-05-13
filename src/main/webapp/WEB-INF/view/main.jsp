@@ -17,8 +17,8 @@
 
 	<form action="login" method="POST" name="login">
 		<div class="login">
-			아이디 : <input type="text" value="" required /><br>
-			비밀번호 : <input type="password" value="" required /><br>
+			아이디 : <input type="text" name="id" required /><br>
+			비밀번호 : <input type="password" name="pw" required /><br>
 			<input type="submit" value="로그인" name="login"/>
 		</div>
 	</form>
